@@ -4,7 +4,7 @@ def MarketBasedPrediction(iteamId):
 	import matplotlib.pyplot as plt
 
 
-	dataset=pd.read_csv('/home/manthan/Desktop/paytm/Taaanthrics404-master/Paytmmodel/crowddatasetforsihmodified.csv')
+	dataset=pd.read_csv('/Users/manthanmkulakarni/gits/Taaanthrics404/paytmfinal/crowddatasetforsihmodified.csv')
 
 	dataset=np.array(dataset)
 	x=[]
@@ -59,10 +59,12 @@ def MarketBasedPrediction(iteamId):
 		for j in range(iteams.shape[0]):
 		    if(distancetable[iteamId[l]][j]>median):
 		        string=string+str(" ")+str(iteams[j])
-		print ("Based On users market basket analysis "+string+"\n")
+		#print ("Based On users market basket analysis "+string+"\n")
+
+	
 		        
 	#if response id negative decrease the value by .15 time else increase the value by .15 times
 
-
+	return(string)
 
 

@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>
+</title>
+<script type="text/javascript" >
+    function myclick() {
+    ar fs = require("fs");
+    var sampleObject = {
+    a: 1,
+    b: 2,
+    c: {
+        x: 11,
+        y: 22
+    }
+};
+
+fs.writeFile("./userresponce.json", JSON.stringify(sampleObject), (err) => {
+    if (err) {
+       alert(err);
+        return;
+    };
+    alert("File has been created");
+});
+    
+    }
+    
+    </script>
+    
+</head>
+<body>
+Enter user details
+<br>
+user id<br>
+<input type="number" id="userid" >
+user region <br>
+<input type="number" id="userregion">
+user age<br>
+<input type="number" id="userage">
+<br>
+<button onClick="myclick()">Login</button>
+</body>
+</html>

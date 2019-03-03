@@ -5,7 +5,7 @@ def UserBasedTimeSlot(userId):
 	import random
 	from sklearn.svm import SVC
 
-	timedata=pd.read_csv('/home/manthan/Desktop/paytm/Taaanthrics404-master/Paytmmodel/userdata/usertime/userstimebehaviour'+str(userId)+'.csv')
+	timedata=pd.read_csv('/Users/manthanmkulakarni/Desktop/userdata/usertime/userstimebehaviour'+str(userId)+'.csv')
 
 
 	timedata=np.array(timedata)
@@ -41,7 +41,7 @@ def UserBasedTimeSlot(userId):
 	for o in range(50):
 		if(yprediction[o]!=0):
 			timeslot.append(xprediction[o][0])
-	print ("Time slot on user activity "+str(timeslot))
-	return np.array(timeslot)
+	#print ("Time slot on user activity "+str(timeslot))
+	return (str(timeslot[0]))
 
 

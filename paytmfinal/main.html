@@ -6,28 +6,36 @@
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    
-    <script type="text/javascript" ">
-function openpython(){
-var spawn = require('child_process').spawn,
-    py    = spawn('python', ['test.py']),
-    data = [1,2,3,4,5,6,7,8,9],
-    dataString = '';
+    <script src=”http://code.jquery.com/jquery-1.9.1.min.js”></script>
+    <script type="text/javascript" src="/Users/manthanmkulakarni/gits/Taaanthrics404/paytmfinal/notification.json"></script>
+    <script type="text/javascript" src="http://localhost:8000"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-py.stdout.on('data', function(data){
-  dataString += data.toString();
-});
-py.stdout.on('end', function(){
-  console.log('Sum of numbers=',dataString);
-});
-py.stdin.write(JSON.stringify(data));
-py.stdin.end();
+<script type="text/javascript" >
+function myclick() {
+// From http://test.com
 
 }
-	</script> 
+
+function myFunction() {
+  $.ajax({ url: 'https://stackoverflow.com/questions/6375461/get-html-code-using-javascript-with-a-url', success: function(data) { alert("data"); } });
+  //var jsonfile=require('/test');
+  
+  //var userdata = JSON.parse(data);	
+  //alert("manthan")
+  //alert("AgeBasedProduct: "+userdata[0].agebasedproduct.toString()+"\nWishList: "+userdata[0].wishlist1.toString()+","+userdata[0].wishlist2.toString());
+}
+
+</script>
+
+
+    
+	
     
 </head>
+
 <body>
-    <button onClick="openpython()">click here</button>
+    <p id="demo"></p>
+    <button onClick="myFunction()">click here</button>
 </body>
 </html>

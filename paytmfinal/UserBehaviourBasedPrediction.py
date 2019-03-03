@@ -9,7 +9,7 @@ def IndivisualUserBasedProductPrediction(userId):
 
 	
 
-	data=pd.read_csv('/home/manthan/Desktop/paytm/Taaanthrics404-master/Paytmmodel/userdata/userresponse/userpersonalizeddata'+str(userId)+'.csv')
+	data=pd.read_csv('/Users/manthanmkulakarni/Desktop/userdata/userresponse/userpersonalizeddata'+str(userId)+'.csv')
 
 
 
@@ -42,9 +42,9 @@ def IndivisualUserBasedProductPrediction(userId):
 	
 	#only top two predction are considered	
 	
-	print("Suitable iteams for userID"+str(userId)+" based on his behaviour are "+str(iteams[recomendedproductid[0]])+" and "+str(iteams[recomendedproductid[1]]))
+	#print("Suitable iteams for userID"+str(userId)+" based on his behaviour are "+str(iteams[recomendedproductid[0]])+" and "+str(iteams[recomendedproductid[1]]))
 
-	return recomendedproductid
+	return ([recomendedproductid,str(iteams[recomendedproductid[0]]),str(iteams[recomendedproductid[1]])])
 
 
 

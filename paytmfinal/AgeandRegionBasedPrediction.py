@@ -4,11 +4,10 @@ def RegionAndAgeBasedGeneralPrediction(userAge,userTime,regionId):
 	import numpy as np
 	import pandas as pd
 	import matplotlib.pyplot as plt
-	import seaborn as sb
 	import random
 	from sklearn.svm import SVC
 
-	dataset=pd.read_csv('/home/manthan/Desktop/paytm/Taaanthrics404-master/Paytmmodel/crowddatasetforsihmodified.csv')
+	dataset=pd.read_csv('/Users/manthanmkulakarni/gits/Taaanthrics404/paytmfinal/crowddatasetforsihmodified.csv')
 
 	region1=[]
 	region2=[]
@@ -64,7 +63,7 @@ def RegionAndAgeBasedGeneralPrediction(userAge,userTime,regionId):
 		if(probabilityInTheRegion[m] != 0):
 			regionselected.append(pname[m])
 
-	print("Probability of choosing the iteams in region "+str(regionId)+" are "+str(regionselected))
+	#print("Probability of choosing the iteams in region "+str(regionId)+" are "+str(regionselected))
 
 
 	#age based suggestion for users
@@ -89,8 +88,8 @@ def RegionAndAgeBasedGeneralPrediction(userAge,userTime,regionId):
 	xpredict=np.array(xpredict)
 	xpredict=np.reshape(xpredict,(1,2))
 	#prediction based in age
-	print ("Based on age is "+str(pname[svrmodel.predict(xpredict)]))
-
+	#print ("Based on age is "+str(pname[svrmodel.predict(xpredict)]))
+	return([str(pname[svrmodel.predict(xpredict)[0]]),str(regionselected[0])])
 
 
 

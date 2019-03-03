@@ -6,7 +6,7 @@ def TimeSlotBasedOnAge(userAge,userGender):
 	from sklearn.linear_model import LinearRegression as lrg
 
 
-	dataforagebasedtime=pd.read_csv('/home/manthan/Desktop/paytm/Taaanthrics404-master/Paytmmodel/AgeandGenderBaserBasedUagetime.csv')
+	dataforagebasedtime=pd.read_csv('/Users/manthanmkulakarni/gits/Taaanthrics404/paytmfinal/AgeandGenderBaserBasedUagetime.csv')
 
 	dataforagebasedtime=np.array(dataforagebasedtime)
 	xagebasedtime=[]
@@ -24,5 +24,6 @@ def TimeSlotBasedOnAge(userAge,userGender):
 	
 	xprediction=np.array(xprediction)
 	xprediction=np.reshape(xprediction,(1,2))
-	print ("Best time based on age is "+str(int(agegenderbasedtimemodel.predict(xprediction))))
-	return xprediction
+	#print ("Best time based on age is "+str(int(agegenderbasedtimemodel.predict(xprediction))))
+	
+	return(str(int(agegenderbasedtimemodel.predict(xprediction))))

@@ -8,7 +8,7 @@ def PotentialIteamsInWishlist(userId):
 	from sklearn.naive_bayes import GaussianNB
 
 
-	data=pd.read_csv('/home/manthan/Desktop/paytm/Taaanthrics404-master/Paytmmodel/userdata/wishlist/wishlist'+str(userId)+'.csv')
+	data=pd.read_csv('/Users/manthanmkulakarni/Desktop/userdata/wishlist/wishlist'+str(userId)+'.csv')
 
 	iteams=['LGTV','SamsungRefigerator','UshaIronBox','MorphyToaster','NikeShoes','Radowatch','RaybanGlasses','Garniearcream','MacBook','OnePlus6T','IphoneXs','Dell','WheelSoap','Turdal','Ketchup','GaramMasala']
 	iteams=np.array(iteams)
@@ -31,7 +31,8 @@ def PotentialIteamsInWishlist(userId):
 
 	treshold=[[350,5],[250,6]]
 	output=gnbmodel.predict(treshold)
-	print("Top two potential iteams in wishlist are "+str(iteams[output[0]])+" and "+str(iteams[output[1]]))
+	#print("Top two potential iteams in wishlist are "+str(iteams[output[0]])+" and "+str(iteams[output[1]]))
 
+	return([str(iteams[output[0]]),str(iteams[output[1]])])
 
 
