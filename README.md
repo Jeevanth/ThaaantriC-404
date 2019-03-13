@@ -18,7 +18,7 @@ Model installation:
 
 4)Execution Details: An UI is provided to give the user detail which gives two outputs.
 
-  One of them is all the notifications which has been received by the user and the other contains all the notifications with the new date and time tag.
+  One of them is, all the notifications which has been received by the user and the other contains all the notifications with the new date and time tag.
 
   The app will be getting the user location on real time and analyze the notifications stored in the buffer and it will also have the accelerator sensor with studies the device behavior and sends the stored notifications likewise.
 
